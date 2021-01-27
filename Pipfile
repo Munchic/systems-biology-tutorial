@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+pystan = "*"
+jupyterlab = "*"
+matplotlib = "*"
+bokeh = "*"
+pandas = "*"
+scipy = "*"
+seaborn = "*"
+tk = "*"
+networkx = "*"
+bleach = "*"
+sympy = "*"
+cvxpy = "*"
+umap-learn = "*"
+
+[requires]
+python_version = "3.6.5"
