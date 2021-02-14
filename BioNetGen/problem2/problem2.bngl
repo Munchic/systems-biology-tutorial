@@ -1,0 +1,25 @@
+begin parameters
+	k1 2.0
+	k2 0.002
+	k3 1.8
+end parameters
+
+begin species
+	C 1000
+	W 1000
+end species
+	
+begin observables
+	Molecules C C()
+	Molecules W W()
+end observables
+
+begin reaction rules
+	C() -> C() + C() k1
+	W() + C() -> W() + W() k2
+	W() -> 0 k3
+end reaction rules
+
+generate_network()
+writeSBML()
+simulate({method=>"ssa", t_end=>25, n_steps=>1000})
